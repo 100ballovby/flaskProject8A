@@ -13,10 +13,16 @@
     <!-- подключили собственные стили -->
 </head>
 <body>
-    <nav>
-        <p><a href="{{ url_for('main_page') }}">Главная</a></p>
-        <p><a href="{{ url_for('contact_page') }}">Контакты</a></p>
-        <p><a href="{{ url_for('gallery_page') }}">Галерея</a></p>
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main_page') }}">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('contact_page') }}">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('gallery_page') }}">Галерея</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <div class="container"> <!-- обертночный контейнер для содержимого сайта -->
