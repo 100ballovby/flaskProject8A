@@ -1,3 +1,7 @@
 .navbar {
     background: #37188d;
 }
+
+.card-img-top {
+    border-radius: 1.75em;
+}

@@ -2,9 +2,19 @@
 
 {% block content %}
     <h1>Галерея изображений</h1>
-    {% for picture in img %} <!-- Цикл, который забрасывает изображения на страницу -->
-        <div class="image-card"> <!-- блок для изображений -->
-            <img src="{{ picture }}"> <!-- путь к изображению берется из переменной picture -->
+
+    <div class="container">
+        <div class="row">
+            {% for item in img %}
+                <div class="card col-sm-3 justify-content-between m-5">
+                    <img src="{{ item }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                             card's content.</p>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
+
 {% endblock %}
