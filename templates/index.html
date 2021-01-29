@@ -7,7 +7,7 @@
             {% for item in img %}
                 {% if item != None %}
                     <div class="carousel-item {% if loop.index == 1 %}active{% endif %}" id="slide{{ loop.index }}">
-                        <img src="{{ item }}" class="d-block w-100 car-img" alt="...">
+                        <img src="{{ item }}" class="d-block w-100" alt="...">
                     </div>
                 {% endif %}
             {% endfor %}
