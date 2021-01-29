@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Галерея изображений</h1>
 
     <div class="container">
+
+        <h1 class="text-center">Галерея изображений</h1>
+
         <div class="row">
             {% for item in img %}
                 <div class="card col-sm-3 justify-content-between m-5">
                     <img src="{{ item }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                             the
                                              card's content.</p>
                     </div>
                 </div>

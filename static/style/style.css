@@ -5,3 +5,11 @@
 .card-img-top {
     border-radius: 1.75em;
 }
+
+.card {
+    transition: transform 2s;
+}
+
+.card:hover {
+    transform: translateX(50px);
+}
