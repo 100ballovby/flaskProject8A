@@ -8,9 +8,12 @@
         <title>My site!</title>
     {% endif %}
     <!-- ###### -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- подключили собственные стили -->
+
+    <!-- подключаем фавикон -->
+    <link rel="icon" href="{{ url_for('static', filename='images/film-roll.png') }}">
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg">
