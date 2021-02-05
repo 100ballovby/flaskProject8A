@@ -36,3 +36,8 @@ def gallery_page():
         'https://images.unsplash.com/photo-1564296786842-4fc88fb50485?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
     ]
     return render_template('gallery.html', img=images)
+
+
+@app.route('/login/')
+def login_page():
+    return render_template('login.html', title='Login')
