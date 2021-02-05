@@ -13,3 +13,12 @@
 .card:hover {
     transform: translateX(50px);
 }
+
+.wrapper {
+    width: 60%;
+    max-width: 500px;
+    margin: 1em auto;
+    padding: 2em;
+    border: 1px dashed rgb(175, 175, 175);
+    border-radius: 5%;
+}

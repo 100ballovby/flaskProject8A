@@ -1,6 +1,6 @@
 ''' маршрутизация сайта '''
 from app import app  # импортирую переменную сайта
-from flask import render_template  # рисует страницу
+from flask import render_template, request  # рисует страницу
 
 
 @app.route('/')
@@ -38,6 +38,21 @@ def gallery_page():
     return render_template('gallery.html', img=images)
 
 
-@app.route('/login/')
+@app.route('/login/', methods=['GET', 'POST'])
 def login_page():
-    return render_template('login.html', title='Login')
+    message = ''
+    email = ''
+    password = ''
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+    if email == 'admin@gmail.com' and password == 'admin':
+        message = 'Successful!'
+        style = 'success'
+    else:
+        message = 'Failed attempt!'
+        style = 'danger'
+    return render_template('login.html', title='Login',
+                           message=message,
+                           style=style)
